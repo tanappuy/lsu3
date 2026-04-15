@@ -1,0 +1,106 @@
+:root {
+    --transition-speed: 0.6s;
+    /* Colores Mosaico: Pastel vs Vivo */
+    --t1-p: #ffb3ba; --t1-v: #e63946;
+    --t2-p: #ffdfba; --t2-v: #f4a261;
+    --t3-p: #ffffba; --t3-v: #e9c46a;
+    --t4-p: #baffc9; --t4-v: #2a9d8f;
+    --t5-p: #bae1ff; --t5-v: #457b9d;
+    --t6-p: #e0bcff; --t6-v: #9b5de5;
+    --t7-p: #ffbcf4; --t7-v: #f15bb5;
+    --t8-p: #c4faf8; --t8-v: #00b4d8;
+    /* Color Institucional */
+    --navy: #003366;
+}
+
+body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.main-container { width: 100vw; height: 100vh; position: relative; }
+
+/* 8 Tiles originales */
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px; padding: 20px;
+    height: 100%; box-sizing: border-box;
+    transition: all var(--transition-speed);
+}
+
+.tile {
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 20px; cursor: pointer;
+    font-size: 1.4rem; font-weight: bold; text-align: center;
+    color: rgba(0,0,0,0.4);
+    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Aplicación de colores */
+.t1 { background-color: var(--t1-p); } .t1.active { background-color: var(--t1-v); }
+.t2 { background-color: var(--t2-p); } .t2.active { background-color: var(--t2-v); }
+.t3 { background-color: var(--t3-p); } .t3.active { background-color: var(--t3-v); }
+.t4 { background-color: var(--t4-p); } .t4.active { background-color: var(--t4-v); }
+.t5 { background-color: var(--t5-p); } .t5.active { background-color: var(--t5-v); }
+.t6 { background-color: var(--t6-p); } .t6.active { background-color: var(--t6-v); }
+.t7 { background-color: var(--t7-p); } .t7.active { background-color: var(--t7-v); }
+.t8 { background-color: var(--t8-p); } .t8.active { background-color: var(--t8-v); }
+
+/* Animación de salida */
+.grid-wrapper.blur-others .tile:not(.active) {
+    filter: grayscale(1); opacity: 0; transform: scale(0.1); pointer-events: none;
+}
+
+/* Tile activo en esquina */
+.tile.active {
+    position: fixed; bottom: 25px; left: 25px;
+    width: 80px; height: 80px; z-index: 1000;
+    color: white; font-size: 0.9rem;
+}
+
+/* Área interna de herramientas */
+.content-area {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #ffffff; display: none;
+    opacity: 0; z-index: 10; padding: 40px;
+    box-sizing: border-box;
+}
+
+.content-area.show { display: block; opacity: 1; }
+
+h1 { color: var(--navy); text-align: center; margin-bottom: 5px; }
+hr { border: 0; border-top: 1px solid #ddd; margin-bottom: 30px; }
+
+/* Grid de 4 elementos (2x2) */
+.escritorio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.herramienta-item {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    background-color: #ffffff;
+    border: 2px solid var(--navy);
+    border-radius: 15px; padding: 35px;
+    text-decoration: none; text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.herramienta-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 51, 102, 0.15);
+    background-color: #f0f7ff;
+}
+
+.herramienta-item i { font-size: 3.5rem; color: var(--navy); margin-bottom: 15px; }
+.herramienta-item span { color: var(--navy); font-weight: bold; font-size: 1.2rem; }
