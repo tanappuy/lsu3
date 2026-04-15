@@ -4,7 +4,7 @@ const contenidos = {
         zoom: 'https://us02web.zoom.us/j/81732423233?pwd=489888',
 		zoomdata: 'ID: 817 3242 3233 Código: 489888',
         materiales: 'https://drive.google.com/drive/folders/1_s95gKYRE-Ui33HWbGcVclAgeoLu3iTp?usp=drive_link',
-        youtube: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJACu5LZAtvY6-y3uCT5f_GZ',
+        youtube: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJCVRcnU636Y9zh5K4nwbutq',
         trabajos: 'https://drive.google.com/trabajosA'
     },
     't2': {
@@ -12,7 +12,7 @@ const contenidos = {
         zoom: 'https://us06web.zoom.us/j/81235619074?pwd=e0bW2zQanuU8hbxWZ5hHWUJ8CyGRHG.1',
 		zoomdata: 'ID: 812 3561 9074 Código: 7D7CG5',
         materiales: 'https://drive.google.com/drive/folders/1BeapDfw6ufVCG-3Ua2wx7RUrZMkWB2Re?usp=sharing',
-        youtube: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJACu5LZAtvY6-y3uCT5f_GZ',
+        youtube: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJAJq5U7IE3jjdVgjje9l1TW',
         trabajos: 'https://drive.google.com/trabajosB'
     },
     't3': {
@@ -52,7 +52,7 @@ const contenidos = {
         zoom: 'https://zoom.us/j/ejemplo2',
 		zoomdata: 'ID: Código:',
         materiales: 'https://drive.google.com/drive/folders/1L6kqHnsYIHMMTQMmH3GnsHTGFPrfhan7?usp=drive_link',
-        youtube: 'https://youtube.com/',
+        youtube: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJAn0LGc91DEd7bXzmnf3Rh2',
         trabajos: 'https://drive.google.com/trabajosB'
     },
     't8': {
