@@ -1,8 +1,8 @@
 const contenidos = {
     't1': {
         titulo: 'LSU - Ximena Romero',
-        zoom: 'https://us02web.zoom.us/j/81732423233?pwd=489888',
-		zoomdata: 'ID: 817 3242 3233 Código: 489888',
+        zoom: 'https://us02web.zoom.us/j/85884799406?pwd=239690',
+		zoomdata: 'ID: 858 8479 9406 Código: 239690',
         materiales: 'https://drive.google.com/drive/folders/1_s95gKYRE-Ui33HWbGcVclAgeoLu3iTp?usp=drive_link',
         youtube: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJCVRcnU636Y9zh5K4nwbutq',
         trabajos: 'https://drive.google.com/trabajosA'
