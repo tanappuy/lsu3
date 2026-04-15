@@ -3,7 +3,7 @@ const contenidos = {
         titulo: 'LSU - Ximena Romero',
         zoom: 'https://us02web.zoom.us/j/81732423233?pwd=489888',
 		zoomdata: 'ID: 817 3242 3233 Código: 489888',
-        materiales: 'https://drive.google.com/materialesA',
+        materiales: 'https://drive.google.com/drive/folders/1_s95gKYRE-Ui33HWbGcVclAgeoLu3iTp?usp=drive_link',
         youtube: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJACu5LZAtvY6-y3uCT5f_GZ',
         trabajos: 'https://drive.google.com/trabajosA'
     },
@@ -19,7 +19,7 @@ const contenidos = {
         titulo: 'I. Español - Ana Belo',
         zoom: 'https://us05web.zoom.us/j/88990037398?pwd=puwKba2LeHPxCKezbGFGsWfsrLCKKZ.1',
 		zoomdata: 'ID: 889 9003 7398 Código: INCOSUR',
-        materiales: 'https://drive.google.com/materialesB',
+        materiales: 'https://drive.google.com/drive/folders/1b9nGZ84CJ01z8Y0xQczOeKrcPyNSIeSy?usp=drive_link',
         youtube: 'https://youtube.com/',
         trabajos: 'https://drive.google.com/trabajosB'
     },
@@ -27,7 +27,7 @@ const contenidos = {
         titulo: 'Lingüística - Serrana Rodríguez',
         zoom: 'https://us06web.zoom.us/j/84737209592?pwd=Ws9FEgEFuQrS2DyMoXSOdY2t7l4OmK.1',
 		zoomdata: 'ID: 847 3720 9592 Código: 089430',
-        materiales: 'https://drive.google.com/materialesB',
+        materiales: 'https://drive.google.com/drive/folders/1w3ob-4M3Tp7TbFbjZGd_rLqTQhRE7We7?usp=drive_link',
         youtube: 'https://youtube.com/',
         trabajos: 'https://drive.google.com/trabajosB'
     },
@@ -35,7 +35,7 @@ const contenidos = {
         titulo: 'Talleres',
         zoom: 'https://zoom.us/j/ejemplo2',
 		zoomdata: 'ID: Código:',
-        materiales: 'https://drive.google.com/materialesB',
+        materiales: 'https://drive.google.com/drive/folders/1sBng7sJWMH8OhnoUCQESW8nWUwqiRpPb?usp=drive_link',
         youtube: 'https://youtube.com/',
         trabajos: 'https://drive.google.com/trabajosB'
     },
@@ -43,7 +43,7 @@ const contenidos = {
         titulo: 'Investigación',
         zoom: 'https://zoom.us/j/ejemplo2',
 		zoomdata: 'ID: Código:',
-        materiales: 'https://drive.google.com/materialesB',
+        materiales: 'https://drive.google.com/drive/folders/1TRLRtJUiQhY0sC2zefJ6Gx5czzyvq18x?usp=drive_link',
         youtube: 'https://youtube.com/',
         trabajos: 'https://drive.google.com/trabajosB'
     },
@@ -51,7 +51,7 @@ const contenidos = {
         titulo: 'Prácticas',
         zoom: 'https://zoom.us/j/ejemplo2',
 		zoomdata: 'ID: Código:',
-        materiales: 'https://drive.google.com/materialesB',
+        materiales: 'https://drive.google.com/drive/folders/1L6kqHnsYIHMMTQMmH3GnsHTGFPrfhan7?usp=drive_link',
         youtube: 'https://youtube.com/',
         trabajos: 'https://drive.google.com/trabajosB'
     },
@@ -59,7 +59,7 @@ const contenidos = {
         titulo: 'Horarios',
         zoom: 'https://zoom.us/j/ejemplo2',
 		zoomdata: 'ID: Código:',
-        materiales: 'https://drive.google.com/materialesB',
+        materiales: 'https://drive.google.com/drive/folders/1MYDqDXh3y1F1ikFP_OkT85MxA3xL634J?usp=drive_link',
         youtube: 'https://youtube.com/',
         trabajos: 'https://drive.google.com/trabajosB'
     },
