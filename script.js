@@ -63,13 +63,16 @@ const contenidos = {
         ]
     },
     't7': {
-        tipo: 'escritorio',
+        tipo: 'talleres',
         titulo: 'Prácticas',
-        herramientas: [
-            { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://zoom.us/j/ejemplo2', extra: 'ID: Código: ' },
-            { icon: 'fas fa-folder-open', label: 'Materiales', url: 'https://drive.google.com/drive/folders/1L6kqHnsYIHMMTQMmH3GnsHTGFPrfhan7?usp=drive_link' },
-            { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/' },
-            { icon: 'fas fa-file-signature', label: 'Trabajos', url: 'https://drive.google.com/trabajosB' }
+        eventos: [
+            {
+                fecha: '09 de Abril, 2026',
+                horario: '19:00 a 20:00 hs',
+                denominacion: 'Meet Aletea: Familia y Autismo',
+                lugar: 'Google Meet',
+                mapa: ''
+            }
         ]
     },
     't8': {

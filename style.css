@@ -146,3 +146,64 @@ h1 { color: var(--navy); margin-bottom: 30px; font-size: 2.2rem; text-align: cen
     .herramienta-item { min-height: 200px; }
     .doc-container iframe { height: 60vh; }
 }
+
+/* --- ESTILO EXTRA PARA PLAYLIST --- */
+.extra-playlist {
+    border-top: 6px solid #ff0000 !important; /* Rojo YouTube para diferenciar */
+    background-color: #fff5f5 !important; /* Un tono muy leve para destacar el final */
+}
+
+.btn-playlist {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background-color: var(--navy);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+
+.btn-playlist:hover {
+    background-color: #004488;
+}
+
+/* --- REPASO DE TALLERES (ESTILO LIMPIO SOLICITADO) --- */
+.talleres-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    text-align: center;
+}
+
+.taller-card {
+    background: #fff;
+    border-top: 6px solid var(--navy);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: none; /* Sin sombras */
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+/* Horario centrado y tamaño ajustado */
+.taller-body p {
+    margin: 10px 0;
+    font-size: 1.4rem;
+    color: #222;
+    font-weight: 500;
+    text-align: center; /* Centrado estricto */
+}
+
+@media (max-width: 768px) {
+    .taller-body p {
+        font-size: 1.1rem; /* Ajuste para que entre en el frame del móvil */
+    }
+}
