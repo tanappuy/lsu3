@@ -1,7 +1,7 @@
 :root {
     --transition-speed: 0.6s;
     --navy: #003366;
-    /* Colores Mosaico: Pastel (reposo) vs Vivo (activo) */
+    /* Colores Mosaico: Pastel vs Vivo */
     --t1-p: #ffb3ba; --t1-v: #e63946;
     --t2-p: #ffdfba; --t2-v: #f4a261;
     --t3-p: #ffffba; --t3-v: #e9c46a;
@@ -27,29 +27,20 @@ body, html {
     display: grid; 
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px; 
-    padding: 20px; 
-    height: 100%; 
-    box-sizing: border-box;
+    gap: 20px; padding: 20px; 
+    height: 100%; box-sizing: border-box;
     transition: all var(--transition-speed);
 }
 
-/* --- BOTONES (TILES) PRINCIPALES --- */
 .tile {
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    border-radius: 20px; 
-    cursor: pointer; 
-    font-weight: bold;
-    text-align: center; 
-    color: rgba(0,0,0,0.5);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 20px; cursor: pointer; font-weight: bold;
+    text-align: center; color: rgba(0,0,0,0.5);
     transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
 }
 
-/* Asignación de colores por materia */
+/* Asignación de colores */
 .t1 { background-color: var(--t1-p); } .t1.active { background-color: var(--t1-v); }
 .t2 { background-color: var(--t2-p); } .t2.active { background-color: var(--t2-v); }
 .t3 { background-color: var(--t3-p); } .t3.active { background-color: var(--t3-v); }
@@ -63,134 +54,96 @@ body, html {
     filter: grayscale(1); opacity: 0; transform: scale(0.1); pointer-events: none;
 }
 
-/* --- BOTÓN VOLVER (FLOTANTE) --- */
+/* --- BOTÓN VOLVER --- */
 .tile.active {
-    position: fixed; 
-    bottom: 30px; 
-    right: 30px;
-    width: 80px; 
-    height: 80px; 
-    z-index: 9999;
-    color: white; 
-    border-radius: 50%;
+    position: fixed; bottom: 30px; right: 30px;
+    width: 80px; height: 80px; z-index: 9999;
+    color: white; border-radius: 50%;
     box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-    font-size: 0.9rem; 
-    display: flex; 
-    flex-direction: column;
+    font-size: 0.9rem; display: flex; flex-direction: column;
 }
-
-.tile.active::after { 
-    content: 'VOLVER'; 
-    margin-top: 5px; 
-    font-size: 0.6rem; 
-    letter-spacing: 1px; 
-}
+.tile.active::after { content: 'VOLVER'; margin-top: 5px; font-size: 0.6rem; letter-spacing: 1px; }
 
 /* --- ÁREA DE CONTENIDO --- */
 .content-area {
-    position: absolute; 
-    top: 0; left: 0; 
-    width: 100%; height: 100%;
-    background: #fff; 
-    display: none; 
-    opacity: 0; 
-    z-index: 10;
-    padding: 40px; 
-    box-sizing: border-box; 
-    overflow-y: auto;
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: #fff; display: none; opacity: 0; z-index: 10;
+    padding: 40px; box-sizing: border-box; overflow-y: auto;
     text-align: center;
 }
-
 .content-area.show { display: block; opacity: 1; }
+h1 { color: var(--navy); margin-bottom: 20px; font-size: 2.2rem; }
 
-h1 { color: var(--navy); margin-bottom: 10px; font-size: 2rem; width: 100%; }
-
-/* --- ESCRITORIO DE HERRAMIENTAS --- */
+/* --- ESCRITORIO DE HERRAMIENTAS (Iconos Grandes) --- */
 .escritorio-grid {
     display: grid; 
     grid-template-columns: repeat(2, 1fr); 
-    gap: 25px;
-    max-width: 900px; 
+    gap: 30px;
+    max-width: 950px; 
     margin: 0 auto; 
     padding-bottom: 120px;
 }
 
 .herramienta-item {
-    display: flex; 
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    min-height: 200px;
-    border: 2px solid var(--navy); 
-    border-radius: 20px;
-    padding: 20px; 
-    text-decoration: none; 
-    background: #fff;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    min-height: 250px; /* Aumentado para dar espacio al icono grande */
+    border: 3px solid var(--navy); /* Borde un poco más grueso para carácter */
+    border-radius: 25px;
+    padding: 30px; text-decoration: none; background: #fff;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .herramienta-item:hover { 
-    transform: translateY(-5px); 
-    box-shadow: 0 10px 20px rgba(0,51,102,0.1); 
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 30px rgba(0,51,102,0.15); 
 }
 
-.herramienta-item i { font-size: 3rem; color: var(--navy); margin-bottom: 15px; }
-.herramienta-item span { font-weight: bold; color: var(--navy); font-size: 1.1rem; }
-.herramienta-item p { font-size: 0.85rem; color: #666; margin-top: 10px; }
+/* TAMAÑO DE ICONO MEJORADO */
+.herramienta-item i { 
+    font-size: 5rem; /* Antes era 3rem, ahora es mucho más grande */
+    color: var(--navy); 
+    margin-bottom: 20px; 
+}
+
+.herramienta-item span { 
+    font-weight: 800; 
+    color: var(--navy); 
+    font-size: 1.3rem; 
+    text-transform: uppercase;
+}
+
+.herramienta-item p { 
+    font-size: 0.9rem; 
+    color: #555; 
+    margin-top: 12px; 
+    line-height: 1.4;
+}
 
 /* --- VISTAS ESPECIALES --- */
-.documento-view iframe { 
-    width: 100%; 
-    height: 75vh; 
-    border-radius: 10px; 
-    border: 1px solid #ccc; 
-}
-
-.taller-card { 
-    background: #fff; 
-    border-left: 6px solid var(--navy); 
-    padding: 20px; 
-    margin-bottom: 15px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
-    text-align: left; 
-}
-
-.btn-main {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 25px;
-    background-color: var(--navy);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-}
+.documento-view iframe { width: 100%; height: 75vh; border: 1px solid #ccc; border-radius: 10px; }
+.taller-card { background: #fff; border-left: 6px solid var(--navy); padding: 20px; margin-bottom: 15px; text-align: left; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
 
 /* --- RESPONSIVE (Móvil) --- */
 @media (max-width: 768px) {
     .grid-wrapper {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        gap: 15px;
-        padding: 15px;
+        height: 100vh; gap: 15px; padding: 15px;
     }
 
-    .tile {
-        font-size: 0.9rem;
-        padding: 10px;
-        min-height: 140px; 
+    .tile { font-size: 0.9rem; height: 100%; }
+
+    .escritorio-grid { grid-template-columns: 1fr; gap: 20px; }
+
+    .herramienta-item {
+        min-height: 220px;
+        padding: 20px;
     }
 
-    .escritorio-grid { grid-template-columns: 1fr; }
-
-    .tile.active { 
-        width: 75px; 
-        height: 75px; 
-        bottom: 20px; 
-        right: 20px; 
-    }
-
+    .herramienta-item i { font-size: 4rem; } /* Tamaño grande también en móvil */
+    
+    .tile.active { width: 75px; height: 75px; bottom: 20px; right: 20px; }
     .content-area { padding: 20px; }
-    h1 { font-size: 1.5rem; }
+    h1 { font-size: 1.6rem; }
 }
