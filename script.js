@@ -1,69 +1,83 @@
 const contenidos = {
     't1': {
+        tipo: 'escritorio',
         titulo: 'LSU - Ximena Romero',
-        zoom: 'https://us02web.zoom.us/j/85884799406?pwd=239690',
-		zoomdata: 'ID: 858 8479 9406 Código: 239690',
-        materiales: 'https://drive.google.com/drive/folders/1_s95gKYRE-Ui33HWbGcVclAgeoLu3iTp?usp=drive_link',
-        youtube: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJCVRcnU636Y9zh5K4nwbutq',
-        trabajos: 'https://drive.google.com/trabajosA'
+        herramientas: [
+            { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://us02web.zoom.us/j/81732423233?pwd=489888', extra: 'ID: 817 3242 3233 Código: 489888' },
+            { icon: 'fas fa-folder-open', label: 'Materiales (Programa)', url: 'https://drive.google.com/drive/folders/1_s95gKYRE-Ui33HWbGcVclAgeoLu3iTp?usp=drive_link' },
+            { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJCVRcnU636Y9zh5K4nwbutq' },
+            { icon: 'fas fa-file-signature', label: 'Propuestas de Trabajo', url: 'https://drive.google.com/trabajosA' }
+        ]
     },
     't2': {
+        tipo: 'escritorio',
         titulo: 'Met. INT. - Karen Ramos',
-        zoom: 'https://us06web.zoom.us/j/81235619074?pwd=e0bW2zQanuU8hbxWZ5hHWUJ8CyGRHG.1',
-		zoomdata: 'ID: 812 3561 9074 Código: 7D7CG5',
-        materiales: 'https://drive.google.com/drive/folders/1BeapDfw6ufVCG-3Ua2wx7RUrZMkWB2Re?usp=sharing',
-        youtube: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJAJq5U7IE3jjdVgjje9l1TW',
-        trabajos: 'https://drive.google.com/trabajosB'
+        herramientas: [
+            { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://us06web.zoom.us/j/81235619074?pwd=e0bW2zQanuU8hbxWZ5hHWUJ8CyGRHG.1', extra: 'ID: 812 3561 9074 Código: 7D7CG5' },
+            { icon: 'fas fa-folder-open', label: 'Materiales', url: 'https://drive.google.com/drive/folders/1BeapDfw6ufVCG-3Ua2wx7RUrZMkWB2Re?usp=sharing' },
+            { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJAJq5U7IE3jjdVgjje9l1TW' },
+            { icon: 'fas fa-file-signature', label: 'Trabajos', url: 'https://drive.google.com/trabajosB' }
+        ]
     },
     't3': {
+        tipo: 'escritorio',
         titulo: 'I. Español - Ana Belo',
-        zoom: 'https://us05web.zoom.us/j/88990037398?pwd=puwKba2LeHPxCKezbGFGsWfsrLCKKZ.1',
-		zoomdata: 'ID: 889 9003 7398 Código: INCOSUR',
-        materiales: 'https://drive.google.com/drive/folders/1b9nGZ84CJ01z8Y0xQczOeKrcPyNSIeSy?usp=drive_link',
-        youtube: 'https://youtube.com/',
-        trabajos: 'https://drive.google.com/trabajosB'
+        herramientas: [
+            { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://us05web.zoom.us/j/88990037398?pwd=puwKba2LeHPxCKezbGFGsWfsrLCKKZ.1', extra: 'ID: 889 9003 7398 Código: INCOSUR' },
+            { icon: 'fas fa-folder-open', label: 'Materiales', url: 'https://drive.google.com/drive/folders/1BeapDfw6ufVCG-3Ua2wx7RUrZMkWB2Re?usp=sharing' },
+            { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/' },
+            { icon: 'fas fa-file-signature', label: 'Trabajos', url: 'https://drive.google.com/trabajosB' }
+        ]
     },
     't4': {
+        tipo: 'escritorio',
         titulo: 'Lingüística - Serrana Rodríguez',
-        zoom: 'https://us06web.zoom.us/j/84737209592?pwd=Ws9FEgEFuQrS2DyMoXSOdY2t7l4OmK.1',
-		zoomdata: 'ID: 847 3720 9592 Código: 089430',
-        materiales: 'https://drive.google.com/drive/folders/1w3ob-4M3Tp7TbFbjZGd_rLqTQhRE7We7?usp=drive_link',
-        youtube: 'https://youtube.com/',
-        trabajos: 'https://drive.google.com/trabajosB'
+        herramientas: [
+            { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://us06web.zoom.us/j/84737209592?pwd=Ws9FEgEFuQrS2DyMoXSOdY2t7l4OmK.1', extra: 'ID: 847 3720 9592 Código: 089430' },
+            { icon: 'fas fa-folder-open', label: 'Materiales', url: 'https://drive.google.com/drive/folders/1BeapDfw6ufVCG-3Ua2wx7RUrZMkWB2Re?usp=sharing' },
+            { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/' },
+            { icon: 'fas fa-file-signature', label: 'Trabajos', url: 'https://drive.google.com/trabajosB' }
+        ]
     },
     't5': {
-        titulo: 'Talleres',
-        zoom: 'https://zoom.us/j/ejemplo2',
-		zoomdata: 'ID: Código:',
-        materiales: 'https://drive.google.com/drive/folders/1sBng7sJWMH8OhnoUCQESW8nWUwqiRpPb?usp=drive_link',
-        youtube: 'https://youtube.com/',
-        trabajos: 'https://drive.google.com/trabajosB'
+        tipo: 'talleres',
+        titulo: 'Talleres y Eventos',
+        eventos: [
+            {
+                fecha: '16 de Mayo, 2026',
+                horario: '9:30 a 13:00 hs',
+                denominacion: 'Taller de Español',
+                lugar: 'Espacio Colabora',
+                mapa: ''
+            }
+        ]
     },
     't6': {
+        tipo: 'escritorio',
         titulo: 'Investigación',
-        zoom: 'https://zoom.us/j/ejemplo2',
-		zoomdata: 'ID: Código:',
-        materiales: 'https://drive.google.com/drive/folders/1TRLRtJUiQhY0sC2zefJ6Gx5czzyvq18x?usp=drive_link',
-        youtube: 'https://youtube.com/',
-        trabajos: 'https://drive.google.com/trabajosB'
+        herramientas: [
+            { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://zoom.us/j/ejemplo2', extra: 'ID: Código: ' },
+            { icon: 'fas fa-folder-open', label: 'Materiales', url: 'https://drive.google.com/drive/folders/1TRLRtJUiQhY0sC2zefJ6Gx5czzyvq18x?usp=drive_link' },
+            { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/' },
+            { icon: 'fas fa-file-signature', label: 'Trabajos', url: 'https://drive.google.com/trabajosB' }
+        ]
     },
     't7': {
+        tipo: 'escritorio',
         titulo: 'Prácticas',
-        zoom: 'https://zoom.us/j/ejemplo2',
-		zoomdata: 'ID: Código:',
-        materiales: 'https://drive.google.com/drive/folders/1L6kqHnsYIHMMTQMmH3GnsHTGFPrfhan7?usp=drive_link',
-        youtube: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJAn0LGc91DEd7bXzmnf3Rh2',
-        trabajos: 'https://drive.google.com/trabajosB'
+        herramientas: [
+            { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://zoom.us/j/ejemplo2', extra: 'ID: Código: ' },
+            { icon: 'fas fa-folder-open', label: 'Materiales', url: 'https://drive.google.com/drive/folders/1L6kqHnsYIHMMTQMmH3GnsHTGFPrfhan7?usp=drive_link' },
+            { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/' },
+            { icon: 'fas fa-file-signature', label: 'Trabajos', url: 'https://drive.google.com/trabajosB' }
+        ]
     },
     't8': {
+        tipo: 'documento',
         titulo: 'Horarios',
-        zoom: 'https://zoom.us/j/ejemplo2',
-		zoomdata: 'ID: Código:',
-        materiales: 'https://drive.google.com/drive/folders/1MYDqDXh3y1F1ikFP_OkT85MxA3xL634J?usp=drive_link',
-        youtube: 'https://youtube.com/',
-        trabajos: 'https://drive.google.com/trabajosB'
-    },
-    // Agrega t3, t4... t8 siguiendo el mismo formato
+        url: 'https://drive.google.com/file/d/1glLuUCwilQfpLR0-6VNbRhDRgTI5r8X2/preview',
+        subtitulo: 'Horarios 3ro. LSU',
+    }
 };
 
 function toggleTile(element, id) {
@@ -73,33 +87,49 @@ function toggleTile(element, id) {
     const contentBody = document.getElementById('content-body');
 
     if (!element.classList.contains('active')) {
-        const info = contenidos[id] || { titulo: 'Sin datos', zoom: '#', materiales: '#', youtube: '#', trabajos: '#' };
+        const info = contenidos[id] || { tipo: 'info', titulo: 'Sin datos', mensaje: 'No configurado.' };
         
         contentTitle.innerText = info.titulo;
-        
-        // Inyectamos el grid de 4 herramientas
-        contentBody.innerHTML = `
-            <a href="${info.zoom}" target="_blank" class="herramienta-item">
-                <i class="fas fa-video"></i>
-                <span>Reunión Zoom</span>
-				<p>${info.zoomdata}</p>
-            </a>
-            <a href="${info.materiales}" target="_blank" class="herramienta-item">
-                <i class="fas fa-folder-open"></i>
-                <span>Materiales (Programa)</span>
-            </a>
-            <a href="${info.youtube}" target="_blank" class="herramienta-item">
-                <i class="fab fa-youtube"></i>
-                <span>Canal de YouTube</span>
-            </a>
-            <a href="${info.trabajos}" target="_blank" class="herramienta-item">
-                <i class="fas fa-file-signature"></i>
-                <span>Propuestas de Trabajo</span>
-            </a>
-        `;
+        contentBody.innerHTML = ''; 
+
+        if (info.tipo === 'escritorio') {
+            contentBody.className = 'escritorio-grid';
+            info.herramientas?.forEach(h => {
+                contentBody.innerHTML += `
+                    <a href="${h.url}" target="_blank" class="herramienta-item">
+                        <i class="${h.icon}"></i>
+                        <span>${h.label}</span>
+                        ${h.extra ? `<p>${h.extra}</p>` : ''}
+                    </a>`;
+            });
+        } 
+        else if (info.tipo === 'talleres') {
+            contentBody.className = 'talleres-grid';
+            info.eventos?.forEach(ev => {
+                contentBody.innerHTML += `
+                    <div class="taller-card">
+                        <div class="taller-header"><i class="far fa-calendar-alt"></i> ${ev.fecha}</div>
+                        <div class="taller-body">
+                            <h3>${ev.denominacion}</h3>
+                            <p><i class="far fa-clock"></i> <strong>Horario:</strong> ${ev.horario}</p>
+                            <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> ${ev.lugar}
+                                ${ev.mapa ? `<a href="${ev.mapa}" target="_blank" class="map-link"><i class="fas fa-external-link-alt"></i></a>` : ''}
+                            </p>
+                        </div>
+                    </div>`;
+            });
+        }
+        else if (info.tipo === 'documento') {
+            contentBody.className = 'documento-view';
+            contentBody.innerHTML = `
+                <div class="doc-container">
+                    <p>${info.subtitulo}</p>
+                    <iframe src="${info.url}" frameborder="0"></iframe>
+                    <br><a href="${info.url}" target="_blank" class="btn-main">Abrir en pantalla completa</a>
+                </div>`;
+        }
 
         grid.classList.add('blur-others');
-        
         setTimeout(() => {
             element.classList.add('active');
             contentArea.classList.add('show');
@@ -107,9 +137,6 @@ function toggleTile(element, id) {
     } else {
         contentArea.classList.remove('show');
         element.classList.remove('active');
-        
-        setTimeout(() => {
-            grid.classList.remove('blur-others');
-        }, 300);
+        setTimeout(() => grid.classList.remove('blur-others'), 300);
     }
 }
