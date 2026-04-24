@@ -1,7 +1,7 @@
 :root {
     --transition-speed: 0.6s;
     --navy: #003366;
-    /* Colores Mosaico: Pastel vs Vivo */
+    /* Colores Mosaico */
     --t1-p: #ffb3ba; --t1-v: #e63946;
     --t2-p: #ffdfba; --t2-v: #f4a261;
     --t3-p: #ffffba; --t3-v: #e9c46a;
@@ -20,27 +20,26 @@ body, html {
     background-color: #f8f9fa;
 }
 
-.main-container { width: 100vw; height: 100vh; position: relative; }
+.main-container { width: 100%; height: 100vh; position: relative; }
 
 /* --- GRILLA PRINCIPAL --- */
 .grid-wrapper {
     display: grid; 
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px; padding: 20px; 
-    height: 100%; box-sizing: border-box;
-    transition: all var(--transition-speed);
+    gap: 15px; padding: 15px; 
+    height: 100%; width: 100%;
+    box-sizing: border-box;
 }
 
 .tile {
     display: flex; align-items: center; justify-content: center;
     border-radius: 20px; cursor: pointer; font-weight: bold;
-    text-align: center; color: rgba(0,0,0,0.5);
+    text-align: center; color: rgba(0,0,0,0.6);
     transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
-    width: 100%; height: 100%;
 }
 
-/* Asignación de colores */
+/* Colores */
 .t1 { background-color: var(--t1-p); } .t1.active { background-color: var(--t1-v); }
 .t2 { background-color: var(--t2-p); } .t2.active { background-color: var(--t2-v); }
 .t3 { background-color: var(--t3-p); } .t3.active { background-color: var(--t3-v); }
@@ -54,96 +53,96 @@ body, html {
     filter: grayscale(1); opacity: 0; transform: scale(0.1); pointer-events: none;
 }
 
-/* --- BOTÓN VOLVER --- */
+/* --- BOTÓN VOLVER (Círculo Perfecto) --- */
 .tile.active {
     position: fixed; bottom: 30px; right: 30px;
-    width: 80px; height: 80px; z-index: 9999;
-    color: white; border-radius: 50%;
+    width: 80px !important; height: 80px !important;
+    z-index: 9999; color: white; border-radius: 50%;
     box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-    font-size: 0.9rem; display: flex; flex-direction: column;
+    display: flex; flex-direction: column;
 }
-.tile.active::after { content: 'VOLVER'; margin-top: 5px; font-size: 0.6rem; letter-spacing: 1px; }
 
 /* --- ÁREA DE CONTENIDO --- */
 .content-area {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     background: #fff; display: none; opacity: 0; z-index: 10;
     padding: 40px; box-sizing: border-box; overflow-y: auto;
-    text-align: center;
 }
 .content-area.show { display: block; opacity: 1; }
-h1 { color: var(--navy); margin-bottom: 20px; font-size: 2.2rem; }
 
-/* --- ESCRITORIO DE HERRAMIENTAS (Iconos Grandes) --- */
+h1 { color: var(--navy); margin-bottom: 30px; font-size: 2.2rem; text-align: center; width: 100%; }
+
+/* --- ESCRITORIO INTERNO (Estilo Limpio) --- */
 .escritorio-grid {
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 30px;
-    max-width: 950px; 
-    margin: 0 auto; 
-    padding-bottom: 120px;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;
+    max-width: 900px; margin: 0 auto; padding-bottom: 120px;
 }
-
 .herramienta-item {
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    min-height: 250px; /* Aumentado para dar espacio al icono grande */
-    border: 3px solid var(--navy); /* Borde un poco más grueso para carácter */
-    border-radius: 25px;
-    padding: 30px; text-decoration: none; background: #fff;
-    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 240px; border: 2px solid var(--navy); border-radius: 25px;
+    padding: 20px; text-decoration: none; background: #fff; text-align: center;
 }
-
-.herramienta-item:hover { 
-    transform: translateY(-8px); 
-    box-shadow: 0 15px 30px rgba(0,51,102,0.15); 
-}
-
-/* TAMAÑO DE ICONO MEJORADO */
-.herramienta-item i { 
-    font-size: 5rem; /* Antes era 3rem, ahora es mucho más grande */
-    color: var(--navy); 
-    margin-bottom: 20px; 
-}
-
+.herramienta-item i { font-size: 4.5rem; color: var(--navy); margin-bottom: 15px; }
 .herramienta-item span { 
-    font-weight: 800; 
+    font-weight: 500; 
     color: var(--navy); 
-    font-size: 1.3rem; 
+    font-size: 1.2rem; 
     text-transform: uppercase;
 }
 
-.herramienta-item p { 
-    font-size: 0.9rem; 
-    color: #555; 
-    margin-top: 12px; 
-    line-height: 1.4;
+/* --- SECCIÓN TALLERES (Sin sombreado, Centrado) --- */
+.talleres-grid {
+    display: flex; flex-direction: column; gap: 25px;
+    max-width: 800px; margin: 0 auto; padding-bottom: 120px;
+    text-align: center;
+}
+.taller-card {
+    background: #fff; 
+    border-top: 6px solid var(--navy); 
+    padding: 30px; 
+    border-radius: 15px;
+    box-shadow: none; /* Eliminamos el sombreado */
+    border-right: 1px solid #eee; /* Borde sutil para definir volumen sin sombra */
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.taller-header { font-weight: bold; color: #888; margin-bottom: 15px; font-size: 1.1rem; }
+.taller-body h3 { margin: 0 0 15px 0; color: var(--navy); font-size: 1.6rem; }
+
+/* Horario Centrado y Grande */
+.taller-body p { 
+    margin: 10px 0; 
+    font-size: 1.4rem; 
+    color: #222; 
+    font-weight: 500; 
+    text-align: center;
+} 
+
+/* --- VISTA DE DOCUMENTOS (Horarios y PDF) --- */
+.documento-view {
+    max-width: 1000px; /* Más ancho para que el horario respire */
+    margin: 0 auto;
+    text-align: center;
+}
+.doc-container iframe {
+    width: 100%;
+    height: 75vh;
+    border: 2px solid var(--navy);
+    border-radius: 10px;
 }
 
-/* --- VISTAS ESPECIALES --- */
-.documento-view iframe { width: 100%; height: 75vh; border: 1px solid #ccc; border-radius: 10px; }
-.taller-card { background: #fff; border-left: 6px solid var(--navy); padding: 20px; margin-bottom: 15px; text-align: left; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-
-/* --- RESPONSIVE (Móvil) --- */
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .grid-wrapper {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        height: 100vh; gap: 15px; padding: 15px;
+        grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr);
+        height: 100vh; gap: 10px; padding: 10px;
     }
-
-    .tile { font-size: 0.9rem; height: 100%; }
-
-    .escritorio-grid { grid-template-columns: 1fr; gap: 20px; }
-
-    .herramienta-item {
-        min-height: 220px;
-        padding: 20px;
-    }
-
-    .herramienta-item i { font-size: 4rem; } /* Tamaño grande también en móvil */
+    .tile { font-size: 0.85rem; border-radius: 15px; }
+    .escritorio-grid { grid-template-columns: 1fr; }
+    .tile.active { width: 70px !important; height: 70px !important; bottom: 20px; right: 20px; }
     
-    .tile.active { width: 75px; height: 75px; bottom: 20px; right: 20px; }
-    .content-area { padding: 20px; }
-    h1 { font-size: 1.6rem; }
+    .taller-body h3 { font-size: 1.3rem; }
+    .taller-body p { font-size: 1.1rem; }
+    .herramienta-item { min-height: 200px; }
+    .doc-container iframe { height: 60vh; }
 }
