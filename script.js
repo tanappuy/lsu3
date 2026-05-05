@@ -33,7 +33,7 @@ const contenidos = {
         tipo: 'escritorio',
         titulo: 'Lingüística - Serrana Rodríguez',
         herramientas: [
-            { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://us06web.zoom.us/j/84737209592?pwd=Ws9FEgEFuQrS2DyMoXSOdY2t7l4OmK.1', extra: 'ID: 847 3720 9592 Código: 089430' },
+            { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://us06web.zoom.us/j/88354666855?pwd=8aN8v6W1i8yYHWwI6Qhw5YIVUlua4w.1', extra: 'ID: 883 5466 6855 Código: 353279' },
             { icon: 'fas fa-folder-open', label: 'Materiales', url: 'https://drive.google.com/drive/folders/1BeapDfw6ufVCG-3Ua2wx7RUrZMkWB2Re?usp=sharing' },
             { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/' },
             { icon: 'fas fa-file-signature', label: 'Trabajos', url: 'https://drive.google.com/trabajosB' }
