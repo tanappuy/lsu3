@@ -50,7 +50,7 @@ const contenidos = {
                 lugar: 'Espacio Colabora',
                 mapa: 'https://share.google/pC3UQbpAhbA6hJsLj'
             },
-			{
+            {
                 fecha: '13 de Junio, 2026',
                 horario: '9:00 a 17:00 hs',
                 denominacion: 'Encuentro y jornada de integración',
@@ -80,21 +80,21 @@ const contenidos = {
                 lugar: 'Google Meet',
                 mapa: ''
             },
-			{
+            {
                 fecha: '16 y 17 de Mayo, 2026',
                 horario: '10:00 a 18:00 hs',
                 denominacion: 'Congreso Celiaquía',
                 lugar: 'Torre de las telecomunicaciones',
                 mapa: 'https://share.google/NOZZux1v5B3RFMRZK'
             },
-			{
+            {
                 fecha: '29 de Mayo, 2026',
                 horario: '18:30 a 19:30 hs',
                 denominacion: 'Ciclo de Charlas FHCE',
                 lugar: 'Zoom FHCE',
                 mapa: 'https://share.google/ZJN4CNgZLXQLLOwWQ'
             },
-			{
+            {
                 fecha: '30 de Mayo, 2026',
                 horario: '12:00 a 13:00 hs',
                 denominacion: 'Taller Automaquillaje',
@@ -125,24 +125,22 @@ function toggleTile(element, id) {
 
         if (info.tipo === 'escritorio') {
             contentBody.className = 'escritorio-grid';
-			info.herramientas?.forEach(h => {
-				if (h.action) {
-					// Si tiene una acción (como mostrarCronograma), se usa onclick
-					contentBody.innerHTML += `
-						<div onclick="${h.action}" class="herramienta-item" style="cursor:pointer">
-							<i class="${h.icon}"></i>
-							<span>${h.label}</span>
-						</div>`;
-				} else {
-					// Si es un enlace normal
-					contentBody.innerHTML += `
-						<a href="${h.url}" target="_blank" class="herramienta-item">
-							<i class="${h.icon}"></i>
-							<span>${h.label}</span>
-							${h.extra ? `<p>${h.extra}</p>` : ''}
-						</a>`;
-				}
-			});
+            info.herramientas?.forEach(h => {
+                if (h.action) {
+                    contentBody.innerHTML += `
+                        <div onclick="${h.action}" class="herramienta-item" style="cursor:pointer">
+                            <i class="${h.icon}"></i>
+                            <span>${h.label}</span>
+                        </div>`;
+                } else {
+                    contentBody.innerHTML += `
+                        <a href="${h.url}" target="_blank" class="herramienta-item">
+                            <i class="${h.icon}"></i>
+                            <span>${h.label}</span>
+                            ${h.extra ? `<p>${h.extra}</p>` : ''}
+                        </a>`;
+                }
+            });
         } 
         else if (info.tipo === 'talleres') {
             contentBody.className = 'talleres-grid';
@@ -186,7 +184,7 @@ function toggleTile(element, id) {
     }
 }
 
-// Función para obtener y filtrar los datos del cronograma
+// Función para obtener, ordenar y filtrar los datos del cronograma
 function mostrarCronograma(materiaFiltro = 'TODO') {
     const contentBody = document.getElementById('content-body');
     const contentTitle = document.getElementById('content-title');
@@ -196,17 +194,18 @@ function mostrarCronograma(materiaFiltro = 'TODO') {
     contentBody.innerHTML = '';
 
     try {
-        // En lugar de hacer fetch, usamos la constante global directa del archivo cronograma.js
         const datos = datosCronograma; 
-        
         let listaFiltrada = [];
 
         if (materiaFiltro === 'TODO') {
-            // Unir todos los arrays de todas las materias
             Object.keys(datos).forEach(m => {
-                datos[m].forEach(ev => listaFiltrada.push({ ...ev, materia: m }));
+                datos[m].forEach(ev => {
+                    if (ev.fecha) { // Ignora eventos sin fecha definida
+                        listaFiltrada.push({ ...ev, materia: m });
+                    }
+                });
             });
-            // Ordenar por fecha cronológica
+            // Ordenamiento cronológico seguro usando el formato AAAA-MM-DD
             listaFiltrada.sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
         } else {
             listaFiltrada = datos[materiaFiltro] || [];
@@ -220,24 +219,34 @@ function mostrarCronograma(materiaFiltro = 'TODO') {
 }
 
 function renderizarTarjetasEvaluacion(eventos, contenedor) {
-    if (eventos.length === 0) {
+    if (eventos.length === 0 || (eventos.length === 1 && !eventos[0].fecha)) {
         contenedor.innerHTML = "<p>No hay evaluaciones programadas.</p>";
         return;
     }
 
-    contenedor.innerHTML = eventos.map(ev => `
-        <div class="taller-card">
-            <div class="taller-header">
-                <i class="far fa-calendar-alt"></i> ${ev.fecha} 
-                ${ev.materia ? `| <strong>${ev.materia}</strong>` : ''}
-            </div>
-            <div class="taller-body">
-                <h3>${ev.denominacion}</h3>
-                <p><i class="fas fa- laptop-house"></i> <strong>Modalidad:</strong> ${ev.modalidad.toUpperCase()}</p>
-                <a href="${ev.propuesta}" target="_blank" class="btn-playlist" style="margin-top:10px; display:inline-block;">
-                    <i class="fas fa-file-pdf"></i> Ver Propuesta
-                </a>
-            </div>
-        </div>
-    `).join('');
+    contenedor.innerHTML = eventos.map(ev => {
+        // Validación y parseo visual de la fecha de AAAA-MM-DD a DD/MM/AAAA
+        let fechaExhibicion = ev.fecha;
+        if (ev.fecha && ev.fecha.includes('-')) {
+            const partes = ev.fecha.split('-');
+            if (partes.length === 3) {
+                fechaExhibicion = `${partes[2]}/${partes[1]}/${partes[0]}`;
+            }
+        }
+
+        return `
+            <div class="taller-card">
+                <div class="taller-header">
+                    <i class="far fa-calendar-alt"></i> ${fechaExhibicion} 
+                    ${ev.materia ? `| <strong>${ev.materia}</strong>` : ''}
+                </div>
+                <div class="taller-body">
+                    <h3>${ev.denominacion}</h3>
+                    <p><i class="fas fa-laptop-house"></i> <strong>Modalidad:</strong> ${ev.modalidad.toUpperCase()}</p>
+                    <a href="${ev.propuesta}" target="_blank" class="btn-playlist" style="margin-top:10px; display:inline-block;">
+                        <i class="fas fa-file-pdf"></i> Ver Propuesta
+                    </a>
+                </div>
+            </div>`;
+    }).join('');
 }

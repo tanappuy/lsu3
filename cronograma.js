@@ -1,13 +1,13 @@
 const datosCronograma = {
   "LSU": [
     {
-      "fecha": "22-06-2026",
+      "fecha": "2026-06-22",
       "denominacion": "Parcial I Grupo 1",
       "propuesta": "https://drive.google.com/file/d/1DEo1KxY0qXkNemA7W8DY0QbztMs9qDSX/view?usp=drive_link",
       "modalidad": "presencial"
     },
 	{
-      "fecha": "24-06-2026",
+      "fecha": "2026-06-24",
       "denominacion": "Parcial I Grupo 2",
       "propuesta": "https://drive.google.com/file/d/1DEo1KxY0qXkNemA7W8DY0QbztMs9qDSX/view?usp=drive_link",
       "modalidad": "presencial"
@@ -15,7 +15,7 @@ const datosCronograma = {
   ],
   "INT": [
     {
-      "fecha": "22-06-2026",
+      "fecha": "2026-06-22",
       "denominacion": "Entrega de Informe",
       "propuesta": "https://drive.google.com/file/d/1DEo1KxY0qXkNemA7W8DY0QbztMs9qDSX/view?usp=drive_link",
       "modalidad": "entrega"
