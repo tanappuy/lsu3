@@ -6,7 +6,7 @@ const contenidos = {
             { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://us06web.zoom.us/j/87021585247?pwd=nYMpWhboB8vagb0V6h7XYqc5mW0alx.1', extra: 'ID: 858 8479 9406 Código: 239690' },
             { icon: 'fas fa-folder-open', label: 'Materiales (Programa)', url: 'https://drive.google.com/drive/folders/1_s95gKYRE-Ui33HWbGcVclAgeoLu3iTp?usp=drive_link' },
             { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJCVRcnU636Y9zh5K4nwbutq' },
-            { icon: 'fas fa-file-signature', label: 'Propuestas de Trabajo', url: 'https://drive.google.com/trabajosA' }
+            { icon: 'fas fa-file-signature', label: 'Evaluaciones', action: "mostrarCronograma('LSU')" }
         ]
     },
     't2': {
@@ -16,7 +16,7 @@ const contenidos = {
             { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://us06web.zoom.us/j/81235619074?pwd=e0bW2zQanuU8hbxWZ5hHWUJ8CyGRHG.1', extra: 'ID: 812 3561 9074 Código: 7D7CG5' },
             { icon: 'fas fa-folder-open', label: 'Materiales', url: 'https://drive.google.com/drive/folders/1BeapDfw6ufVCG-3Ua2wx7RUrZMkWB2Re?usp=sharing' },
             { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJAJq5U7IE3jjdVgjje9l1TW' },
-            { icon: 'fas fa-file-signature', label: 'Trabajos', url: 'https://drive.google.com/trabajosB' }
+            { icon: 'fas fa-file-signature', label: 'Evaluaciones', action: "mostrarCronograma('INT')" }
         ]
     },
     't3': {
@@ -26,7 +26,7 @@ const contenidos = {
             { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://us05web.zoom.us/j/88990037398?pwd=puwKba2LeHPxCKezbGFGsWfsrLCKKZ.1', extra: 'ID: 889 9003 7398 Código: INCOSUR' },
             { icon: 'fas fa-folder-open', label: 'Materiales', url: 'https://drive.google.com/drive/folders/1BeapDfw6ufVCG-3Ua2wx7RUrZMkWB2Re?usp=sharing' },
             { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/' },
-            { icon: 'fas fa-file-signature', label: 'Trabajos', url: 'https://drive.google.com/trabajosB' }
+            { icon: 'fas fa-file-signature', label: 'Evaluaciones', action: "mostrarCronograma('ESP')" }
         ]
     },
     't4': {
@@ -36,7 +36,7 @@ const contenidos = {
             { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://us06web.zoom.us/j/88354666855?pwd=8aN8v6W1i8yYHWwI6Qhw5YIVUlua4w.1', extra: 'ID: 883 5466 6855 Código: 353279' },
             { icon: 'fas fa-folder-open', label: 'Materiales', url: 'https://drive.google.com/drive/folders/1BeapDfw6ufVCG-3Ua2wx7RUrZMkWB2Re?usp=sharing' },
             { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/' },
-            { icon: 'fas fa-file-signature', label: 'Trabajos', url: 'https://drive.google.com/trabajosB' }
+            { icon: 'fas fa-file-signature', label: 'Evaluaciones', action: "mostrarCronograma('LING')" }
         ]
     },
     't5': {
@@ -48,7 +48,14 @@ const contenidos = {
                 horario: '9:30 a 13:00 hs',
                 denominacion: 'Taller de Español',
                 lugar: 'Espacio Colabora',
-                mapa: ''
+                mapa: 'https://share.google/pC3UQbpAhbA6hJsLj'
+            },
+			{
+                fecha: '13 de Junio, 2026',
+                horario: '9:00 a 17:00 hs',
+                denominacion: 'Encuentro y jornada de integración',
+                lugar: 'CINDE',
+                mapa: 'https://share.google/4XCN1Lk5A9rUnwtr7'
             }
         ]
     },
@@ -59,7 +66,7 @@ const contenidos = {
             { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://zoom.us/j/ejemplo2', extra: 'ID: Código: ' },
             { icon: 'fas fa-folder-open', label: 'Materiales', url: 'https://drive.google.com/drive/folders/1TRLRtJUiQhY0sC2zefJ6Gx5czzyvq18x?usp=drive_link' },
             { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/' },
-            { icon: 'fas fa-file-signature', label: 'Trabajos', url: 'https://drive.google.com/trabajosB' }
+            { icon: 'fas fa-file-signature', label: 'Evaluaciones', action: "mostrarCronograma('INV')" }
         ]
     },
     't7': {
@@ -72,6 +79,27 @@ const contenidos = {
                 denominacion: 'Meet Aletea: Familia y Autismo',
                 lugar: 'Google Meet',
                 mapa: ''
+            },
+			{
+                fecha: '16 y 17 de Mayo, 2026',
+                horario: '10:00 a 18:00 hs',
+                denominacion: 'Congreso Celiaquía',
+                lugar: 'Torre de las telecomunicaciones',
+                mapa: 'https://share.google/NOZZux1v5B3RFMRZK'
+            },
+			{
+                fecha: '29 de Mayo, 2026',
+                horario: '18:30 a 19:30 hs',
+                denominacion: 'Ciclo de Charlas FHCE',
+                lugar: 'Zoom FHCE',
+                mapa: 'https://share.google/ZJN4CNgZLXQLLOwWQ'
+            },
+			{
+                fecha: '30 de Mayo, 2026',
+                horario: '12:00 a 13:00 hs',
+                denominacion: 'Taller Automaquillaje',
+                lugar: 'IG Live CINDE',
+                mapa: 'https://share.google/4XCN1Lk5A9rUnwtr7'
             }
         ]
     },
@@ -97,14 +125,24 @@ function toggleTile(element, id) {
 
         if (info.tipo === 'escritorio') {
             contentBody.className = 'escritorio-grid';
-            info.herramientas?.forEach(h => {
-                contentBody.innerHTML += `
-                    <a href="${h.url}" target="_blank" class="herramienta-item">
-                        <i class="${h.icon}"></i>
-                        <span>${h.label}</span>
-                        ${h.extra ? `<p>${h.extra}</p>` : ''}
-                    </a>`;
-            });
+			info.herramientas?.forEach(h => {
+				if (h.action) {
+					// Si tiene una acción (como mostrarCronograma), se usa onclick
+					contentBody.innerHTML += `
+						<div onclick="${h.action}" class="herramienta-item" style="cursor:pointer">
+							<i class="${h.icon}"></i>
+							<span>${h.label}</span>
+						</div>`;
+				} else {
+					// Si es un enlace normal
+					contentBody.innerHTML += `
+						<a href="${h.url}" target="_blank" class="herramienta-item">
+							<i class="${h.icon}"></i>
+							<span>${h.label}</span>
+							${h.extra ? `<p>${h.extra}</p>` : ''}
+						</a>`;
+				}
+			});
         } 
         else if (info.tipo === 'talleres') {
             contentBody.className = 'talleres-grid';
@@ -142,4 +180,60 @@ function toggleTile(element, id) {
         element.classList.remove('active');
         setTimeout(() => grid.classList.remove('blur-others'), 300);
     }
+}
+
+// Función para obtener y filtrar los datos del cronograma
+function mostrarCronograma(materiaFiltro = 'TODO') {
+    const contentBody = document.getElementById('content-body');
+    const contentTitle = document.getElementById('content-title');
+    
+    contentTitle.innerText = materiaFiltro === 'TODO' ? "Cronograma General" : `Evaluaciones: ${materiaFiltro}`;
+    contentBody.className = 'talleres-grid';
+    contentBody.innerHTML = '';
+
+    try {
+        // En lugar de hacer fetch, usamos la constante global directa del archivo cronograma.js
+        const datos = datosCronograma; 
+        
+        let listaFiltrada = [];
+
+        if (materiaFiltro === 'TODO') {
+            // Unir todos los arrays de todas las materias
+            Object.keys(datos).forEach(m => {
+                datos[m].forEach(ev => listaFiltrada.push({ ...ev, materia: m }));
+            });
+            // Ordenar por fecha cronológica
+            listaFiltrada.sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
+        } else {
+            listaFiltrada = datos[materiaFiltro] || [];
+        }
+
+        renderizarTarjetasEvaluacion(listaFiltrada, contentBody);
+
+    } catch (error) {
+        contentBody.innerHTML = `<p>Error al procesar el cronograma: ${error.message}</p>`;
+    }
+}
+
+function renderizarTarjetasEvaluacion(eventos, contenedor) {
+    if (eventos.length === 0) {
+        contenedor.innerHTML = "<p>No hay evaluaciones programadas.</p>";
+        return;
+    }
+
+    contenedor.innerHTML = eventos.map(ev => `
+        <div class="taller-card">
+            <div class="taller-header">
+                <i class="far fa-calendar-alt"></i> ${ev.fecha} 
+                ${ev.materia ? `| <strong>${ev.materia}</strong>` : ''}
+            </div>
+            <div class="taller-body">
+                <h3>${ev.denominacion}</h3>
+                <p><i class="fas fa- laptop-house"></i> <strong>Modalidad:</strong> ${ev.modalidad.toUpperCase()}</p>
+                <a href="${ev.propuesta}" target="_blank" class="btn-playlist" style="margin-top:10px; display:inline-block;">
+                    <i class="fas fa-file-pdf"></i> Ver Propuesta
+                </a>
+            </div>
+        </div>
+    `).join('');
 }
