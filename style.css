@@ -90,7 +90,7 @@ h1 { color: var(--navy); margin-bottom: 30px; font-size: 2.2rem; text-align: cen
     text-transform: uppercase;
 }
 
-/* --- SECCIÓN TALLERES (Sin sombreado, Centrado) --- */
+/* --- SECCIÓN TALLERES Y EVALUACIONES (Sin sombreado, Centrado) --- */
 .talleres-grid {
     display: flex; flex-direction: column; gap: 25px;
     max-width: 800px; margin: 0 auto; padding-bottom: 120px;
@@ -101,7 +101,7 @@ h1 { color: var(--navy); margin-bottom: 30px; font-size: 2.2rem; text-align: cen
     border-top: 6px solid var(--navy); 
     padding: 30px; 
     border-radius: 15px;
-    box-shadow: none; /* Eliminamos el sombreado */
+    box-shadow: none; /* Sin sombras */
     border-right: 1px solid #eee; /* Borde sutil para definir volumen sin sombra */
     border-left: 1px solid #eee;
     border-bottom: 1px solid #eee;
@@ -109,13 +109,13 @@ h1 { color: var(--navy); margin-bottom: 30px; font-size: 2.2rem; text-align: cen
 .taller-header { font-weight: bold; color: #888; margin-bottom: 15px; font-size: 1.1rem; }
 .taller-body h3 { margin: 0 0 15px 0; color: var(--navy); font-size: 1.6rem; }
 
-/* Horario Centrado y Grande */
+/* Horario e Información Centrada y Grande */
 .taller-body p { 
     margin: 10px 0; 
     font-size: 1.4rem; 
     color: #222; 
     font-weight: 500; 
-    text-align: center;
+    text-align: center; /* Centrado estricto */
 } 
 
 /* --- VISTA DE DOCUMENTOS (Horarios y PDF) --- */
@@ -131,7 +131,7 @@ h1 { color: var(--navy); margin-bottom: 30px; font-size: 2.2rem; text-align: cen
     border-radius: 10px;
 }
 
-/* --- RESPONSIVE --- */
+/* --- RESPONSIVE GENERAL --- */
 @media (max-width: 768px) {
     .grid-wrapper {
         grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr);
@@ -142,7 +142,7 @@ h1 { color: var(--navy); margin-bottom: 30px; font-size: 2.2rem; text-align: cen
     .tile.active { width: 70px !important; height: 70px !important; bottom: 20px; right: 20px; }
     
     .taller-body h3 { font-size: 1.3rem; }
-    .taller-body p { font-size: 1.1rem; }
+    .taller-body p { font-size: 1.1rem; } /* Ajuste para que entre en el frame del móvil */
     .herramienta-item { min-height: 200px; }
     .doc-container iframe { height: 60vh; }
 }
@@ -171,58 +171,22 @@ h1 { color: var(--navy); margin-bottom: 30px; font-size: 2.2rem; text-align: cen
     background-color: #004488;
 }
 
-/* --- REPASO DE TALLERES (ESTILO LIMPIO SOLICITADO) --- */
-.talleres-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-bottom: 120px;
-    text-align: center;
-}
-
-.taller-card {
-    background: #fff;
-    border-top: 6px solid var(--navy);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: none; /* Sin sombras */
-    border-right: 1px solid #eee;
-    border-left: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-}
-
-/* Horario centrado y tamaño ajustado */
-.taller-body p {
-    margin: 10px 0;
-    font-size: 1.4rem;
-    color: #222;
-    font-weight: 500;
-    text-align: center; /* Centrado estricto */
-}
-
-@media (max-width: 768px) {
-    .taller-body p {
-        font-size: 1.1rem; /* Ajuste para que entre en el frame del móvil */
-    }
-}
-
-/* --- PIE DE PÁGINA DE AUTORÍA --- */
+/* --- PIE DE PÁGINA DE AUTORÍA (CORREGIDO PARA MÓVILES) --- */
 .site-footer {
-	display: block;
-    text-align: center;
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    box-sizing: border-box;
     padding: 30px 0 60px 0; /* Margen inferior amplio para evitar colisiones con el botón flotante */
     color: #666;
     font-size: 0.9rem;
     font-weight: 500;
-    width: 100%;
     clear: both;
 }
 
 @media (max-width: 768px) {
     .site-footer {
-		text-align: center;
+        text-align: center !important; /* Refuerzo estricto para dispositivos móviles */
         padding: 20px 0 80px 0; /* Más espacio en móviles para el botón flotante redondo */
         font-size: 0.85rem;
     }
