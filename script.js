@@ -164,6 +164,10 @@ function toggleTile(element, id) {
             contentBody.className = 'documento-view';
             contentBody.innerHTML = `
                 <div class="doc-container">
+                    <button onclick="mostrarCronograma('TODO')" class="btn-playlist" style="width: 100%; display: block; margin-bottom: 20px; box-sizing: border-box;">
+                        <i class="fas fa-calendar-alt"></i> Cronograma de evaluaciones
+                    </button>
+                    
                     <p>${info.subtitulo}</p>
                     <iframe src="${info.url}" frameborder="0"></iframe>
                     <br><a href="${info.url}" target="_blank" class="btn-main">Abrir en pantalla completa</a>
