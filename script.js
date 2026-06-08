@@ -100,6 +100,13 @@ const contenidos = {
                 denominacion: 'Taller Automaquillaje',
                 lugar: 'IG Live CINDE',
                 mapa: 'https://share.google/4XCN1Lk5A9rUnwtr7'
+            },
+            {
+                fecha: '17 de Junio, 2026',
+                horario: '15:00 a 16:00 hs',
+                denominacion: 'Lanzamiento del Bachillerato para basquebolistas',
+                lugar: 'Canal de Youtube INEFOP (https://youtube.com/@inefopuruguay?si=2ld6RVVfjA1NAR52',
+                mapa: 'https://share.google/BoYrX6GHoVcN6i7nv'
             }
         ]
     },
