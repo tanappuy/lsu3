@@ -3,7 +3,7 @@ const contenidos = {
         tipo: 'escritorio',
         titulo: 'LSU - Ximena Romero',
         herramientas: [
-            { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://us06web.zoom.us/j/87021585247?pwd=nYMpWhboB8vagb0V6h7XYqc5mW0alx.1', extra: 'ID: 858 8479 9406 Código: 239690' },
+            { icon: 'fas fa-video', label: 'Reunión Zoom', url: 'https://us06web.zoom.us/j/89752374720?pwd=MMwWapIajkr0MEJVsninaJDmneA0LI.1', extra: 'ID: 897 5237 4720 Código: 932928' },
             { icon: 'fas fa-folder-open', label: 'Materiales (Programa)', url: 'https://drive.google.com/drive/folders/1_s95gKYRE-Ui33HWbGcVclAgeoLu3iTp?usp=drive_link' },
             { icon: 'fab fa-youtube', label: 'Canal de YouTube', url: 'https://www.youtube.com/playlist?list=PLT1wlKr0eeJCVRcnU636Y9zh5K4nwbutq' },
             { icon: 'fas fa-file-signature', label: 'Evaluaciones', action: "mostrarCronograma('LSU')" }
