@@ -84,13 +84,13 @@ const contenidos = {
                 fecha: '16 y 17 de Mayo, 2026',
                 horario: '10:00 a 18:00 hs',
                 denominacion: 'Congreso Celiaquía',
-                lugar: 'Torre de las telecomunicaciones',
+                lugar: 'Torre de las Telecomunicaciones',
                 mapa: 'https://share.google/NOZZux1v5B3RFMRZK'
             },
             {
                 fecha: '29 de Mayo, 2026',
                 horario: '18:30 a 19:30 hs',
-                denominacion: 'Ciclo de Charlas FHCE',
+                denominacion: 'Ciclo de Charlas FHCE 1er encuentro',
                 lugar: 'Zoom FHCE',
                 mapa: 'https://share.google/ZJN4CNgZLXQLLOwWQ'
             },
@@ -102,11 +102,25 @@ const contenidos = {
                 mapa: 'https://share.google/4XCN1Lk5A9rUnwtr7'
             },
             {
+                fecha: '12 de Junio, 2026',
+                horario: '18:30 a 19:30 hs',
+                denominacion: 'Ciclo de Charlas FHCE 2do. encuentro',
+                lugar: 'Zoom FHCE',
+                mapa: 'https://share.google/ZJN4CNgZLXQLLOwWQ'
+            },
+            {
                 fecha: '17 de Junio, 2026',
                 horario: '15:00 a 16:00 hs',
                 denominacion: 'Lanzamiento del Bachillerato para basquebolistas',
                 lugar: 'Canal de Youtube INEFOP (https://youtube.com/@inefopuruguay?si=2ld6RVVfjA1NAR52',
                 mapa: 'https://share.google/BoYrX6GHoVcN6i7nv'
+            },
+            {
+                fecha: '25 de Julio, 2026',
+                horario: '15:00 a 17:00 hs',
+                denominacion: 'Visita guiada al Museo Andes 1972',
+                lugar: 'Museo Andes',
+                mapa: 'https://maps.app.goo.gl/QGCMrJNkBrE884jN9'
             }
         ]
     },
